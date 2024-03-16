@@ -1,4 +1,4 @@
-export interface Ride {
+interface Ride {
   id: string;
   userId: string;
   driverId: string | null;
@@ -19,4 +19,10 @@ export interface Ride {
     | 'dropped-off';
   pickupTime: Date;
   timestamp: Date;
+}
+
+interface Booking {
+  id: string;
+  ride: Ride;
+  type: 'accepted' | 'pending' | 'rejected';
 }

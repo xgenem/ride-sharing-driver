@@ -1,8 +1,6 @@
-import {PayloadAction, createAsyncThunk, createSlice} from '@reduxjs/toolkit';
-import {Booking} from '../../../models/bookings';
+import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import {fakeApi} from '../../../services';
 import {BookingsState} from './type';
-import {act} from 'react-test-renderer';
 
 export const bookingsInitialState: BookingsState = {
   bookings: [],
