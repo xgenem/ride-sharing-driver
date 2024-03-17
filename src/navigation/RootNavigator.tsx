@@ -1,14 +1,15 @@
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import HomeScreen from '../screens/Home/containers/Home';
+import {RootNavigatorParamList} from './types';
 
-export type RootNavigatorParamList = {
-  Home: undefined;
-};
-
-const {Stack, Screen} = createNativeStackNavigator<RootNavigatorParamList>();
+const {Navigator, Screen} =
+  createNativeStackNavigator<RootNavigatorParamList>();
 
 export const RootNavigator = () => {
-  <Stack>
-    <Screen name="Home" component={HomeScreen} />
-  </Stack>;
+  return (
+    <Navigator>
+      <Screen name="Home" component={HomeScreen} />
+    </Navigator>
+  );
 };
